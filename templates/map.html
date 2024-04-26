@@ -43,19 +43,21 @@
     <div class="container-fluid">
         <div class="top-villes">
             <h2>Top 5 villes par nombre de vélos :</h2>
-            <ul>
+            <ol>
                 <!-- Boucle pour afficher les informations sur les villes -->
                 {% for ville, velos in top_villes %}
                     <li><span><b>{{ ville.capitalize() }}</b></span> - <span>{{ velos }}</span> vélos</li>
                 {% endfor %}
-            </ul>
+            </ol>
         </div>
         <div>
+            <ul>
             <h2>Pourcentages de vélos mécaniques vs électriques :</h2>
             <!-- Boucle pour afficher les pourcentages -->
             {% for ville, pourcentage in pourcentages_velos.items() %}
-                <div id="{{ ville|replace(' ', '-') }}-pourcentage" class="ville-pourcentage"><b>{{ ville.capitalize() }}</b> -  {{ pourcentage["pourcentage_mecaniques"] }}% mécaniques, {{ pourcentage["pourcentage_electriques"] }}% électriques</div>
+                <li><div id="{{ ville|replace(' ', '-') }}-pourcentage" class="ville-pourcentage"><b>{{ ville.capitalize() }}</b> -  {{ pourcentage["pourcentage_mecaniques"] }}% mécaniques, {{ pourcentage["pourcentage_electriques"] }}% électriques</div></li>
             {% endfor %}
+            </ul>   
         </div>
     </div>
 
