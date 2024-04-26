@@ -1,0 +1,90 @@
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+.pointer_image {
+    height: 42px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pointer-info {
+    display: flex;
+    align-items: center;
+}
+
+.pointer-info img {
+    height: 25px;
+    margin-right: 10px;
+}
+
+.pointer-info span {
+    font-size: 14px;
+    color: #333;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.search-input {
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #ced4da;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.search-btn {
+    border-radius: 0px 30px 30px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.info-window {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px;
+}
+
+.info-window h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-window p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-fluid > div {
+    flex: 1;
+    padding: 20px;
+}
+
+.container-fluid h2 {
+    text-align: center;
+}
