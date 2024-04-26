@@ -29,18 +29,18 @@ def obtenir_pourcentage_velos_mecaniques_electriques(data):
         velos_electriques = station["totalStands"]["availabilities"]["electricalBikes"]
         
         if total_velos > 0:
-            pourcentage_mecaniques = (velos_mecaniques / total_velos) * 100
-            pourcentage_electriques = (velos_electriques / total_velos) * 100
+            pourcentage_mecaniques = int((velos_mecaniques / total_velos) * 100)
+            pourcentage_electriques = int((velos_electriques / total_velos) * 100)
         else:
-            pourcentage_mecaniques = 0.0
-            pourcentage_electriques = 0.0
+            pourcentage_mecaniques = 0
+            pourcentage_electriques = 0
         
         pourcentages[station["name"]] = {
             "total_velos": total_velos,
             "velos_mecaniques": velos_mecaniques,
-            "pourcentage_mecaniques": round(pourcentage_mecaniques, 2),
+            "pourcentage_mecaniques": pourcentage_mecaniques,
             "velos_electriques": velos_electriques,
-            "pourcentage_electriques": round(pourcentage_electriques, 2)
+            "pourcentage_electriques": pourcentage_electriques
         }
     return pourcentages
 
